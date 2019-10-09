@@ -1,5 +1,6 @@
 import {react2angular} from 'react2angular';
-import AddAppointmentContainer from './react-components/containers/AddAppointmentContainer.jsx';
+import store from "./react-components/store";
+import AddAppointmentProvider from './react-components/containers/AddAppointmentProvider.jsx';
 
-angular.module('bahmni.appointments')
-.component('reactAddAppointment', react2angular(AddAppointmentContainer));
+angular.module('bahmni.appointments').constant('store', store)
+.component('reactAddAppointment', react2angular(AddAppointmentProvider));
