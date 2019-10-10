@@ -8,7 +8,7 @@
   border-radius: 12px;
   background-color: #ffffff;
 
-  .firstRow {
+  .searchFieldsContainer {
     top: 50px;
     position: relative;
     padding: 5% 2%;
@@ -26,6 +26,14 @@
 
     .providerSearch {
       width: 30%;
+    }
+
+    .appointmentDatePicker {
+      top: 50px;
+      position: relative;
+      padding: 5% 2%;
+      display: flex;
+      margin-left: 25px;
     }
   }
 

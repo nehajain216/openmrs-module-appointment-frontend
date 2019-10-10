@@ -1,10 +1,18 @@
 import React, {Fragment, useState} from "react";
 import classNames from 'classnames';
-import {appointmenteditor, patientServiceSearch, providerSearch, searchFieldsContainer} from './AppointmentEditor.module.scss';
+import {
+    appointmenteditor,
+    patientServiceSearch,
+    providerSearch,
+    searchFieldsContainer,
+    appointmentDatePicker
+} from './AppointmentEditor.module.scss';
 import PatientSearch from "../PatientSearch/PatientSearch.jsx";
 import ServiceSearch from "../Service/ServiceSearch.jsx";
 import ServiceTypeSearch from "../Service/ServiceTypeSearch.jsx";
 import ProviderSearch from "../Provider/ProviderSearch.jsx";
+import AppointmentDatePicker from "../DatePicker/DatePicker.jsx";
+
 
 export const AppointmentEditor = () => {
     const [patient, setPatient] = useState();
@@ -19,11 +27,14 @@ export const AppointmentEditor = () => {
                 <div className={classNames(patientServiceSearch)}>
                     <PatientSearch onChange={(optionSelected) => setPatient(optionSelected.value) }/>
                     <ServiceSearch onChange={(optionSelected) => setServiceUuid(optionSelected.value)}/>
-                    <ServiceTypeSearch serviceUuid={serviceUuid} />
+                    <ServiceTypeSearch serviceUuid={serviceUuid}/>
                 </div>
                 <div className={classNames(providerSearch)}>
                     <ProviderSearch onChange={selectedProviders => setProviders(selectedProviders)}/>
                 </div>
+            </div>
+            <div className={classNames(appointmentDatePicker)}>
+                <AppointmentDatePicker/>
             </div>
         </div>
     </Fragment>);
