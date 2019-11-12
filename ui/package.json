@@ -14,7 +14,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
-    "rc-calendar": "^9.15.6",
+    "rc-calendar": "^9.15.7",
     "rc-checkbox": "^2.1.8",
     "rc-time-picker": "^3.7.2",
     "react": "^16.9.0",
@@ -22,6 +22,7 @@
     "react-intl": "^3.3.2",
     "react-redux": "^7.1.1",
     "react-select": "^3.0.6",
+    "react-tabs": "^3.0.0",
     "react2angular": "^4.0.6",
     "reactjs-popup": "^1.5.0",
     "redux": "^4.0.4",
@@ -95,8 +96,8 @@
   },
   "scripts": {
     "test": "karma start test/config/karma.conf.js",
-    "test-react": "jest",
-    "test-react-watch": "jest --watch",
+    "test-react": "TZ=UTC jest",
+    "test-react-watch": "TZ=UTC jest --watch",
     "build-react": "webpack --env=production",
     "build-react-dev": "webpack --env=developemnt --watch",
     "storybook": "start-storybook"

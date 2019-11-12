@@ -109,19 +109,13 @@ angular
                     }
                 }
             }).state('home.manage.appointments.calendar.edit', {
-                url: '/:uuid',
+                url: '/:uuid?isRecurring',
+                params: {
+                    isRecurring: null
+                },
                 views: {
                     'content@appointment': {
-                        templateUrl: 'views/manage/newAppointment.html',
-                        controller: 'AppointmentsCreateController'
-                    }
-                },
-                resolve: {
-                    appointmentContext: function (appointmentInitialization, $stateParams) {
-                        return appointmentInitialization($stateParams);
-                    },
-                    appointmentCreateConfig: function (initializeConfig, appointmentConfigInitialization, appointmentContext) {
-                        return appointmentConfigInitialization(appointmentContext);
+                        template: '<react-add-appointment-wrapper />'
                     }
                 }
             }).state('home.manage.appointments.list', {
@@ -155,19 +149,13 @@ angular
                     }
                 }
             }).state('home.manage.appointments.list.edit', {
-                url: '/:uuid',
+                url: '/:uuid?isRecurring',
+                params: {
+                    isRecurring: null
+                },
                 views: {
                     'content@appointment': {
-                        templateUrl: 'views/manage/newAppointment.html',
-                        controller: 'AppointmentsCreateController'
-                    }
-                },
-                resolve: {
-                    appointmentContext: function (appointmentInitialization, $stateParams) {
-                        return appointmentInitialization($stateParams);
-                    },
-                    appointmentCreateConfig: function (initializeConfig, appointmentConfigInitialization, appointmentContext) {
-                        return appointmentConfigInitialization(appointmentContext);
+                        template: '<react-add-appointment-wrapper />'
                     }
                 }
             }).state('home.admin', {
